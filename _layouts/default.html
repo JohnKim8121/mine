@@ -1,0 +1,20 @@
+<style>
+  df-messenger {
+   --df-messenger-bot-message: #D6F7FC;
+   --df-messenger-chat-background-color: #EFF6F6;
+   --df-messenger-input-box-color: #EFF1F1;
+   --df-messenger-font-color: black;
+   --df-messenger-user-message: #FBF7B9;
+  }
+</style>
+    
+    {% if site.google_analytics %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+      </script>
+    {% endif %}
+    <meta charset="UTF-8">
