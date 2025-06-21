@@ -1,37 +1,23 @@
-## Welcome to 김준화 Pages
+# Soccer Offside Detection
 
-You can use the [editor on GitHub](https://github.com/JohnKim8121/mine/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+This project contains a simple Flask application that demonstrates offside detection using a webcam feed. It relies on a pre-trained YOLOv5 model to detect players and the ball from each frame.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Setup
 
-### Markdown
+Install the Python dependencies:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+pip install -r requirements.txt
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Running
 
-### Jekyll Themes
+Start the Flask server:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JohnKim8121/mine/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```bash
+python -m offside_app.app
+```
 
-### Support or Contact
+Open `http://localhost:5000` in your browser to view the live video feed. The application will attempt to highlight players and the ball and display `OFFSIDE!` on the screen when the naive offside check triggers.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+This is a basic proof of concept and does **not** implement full rules of soccer offside detection.
